@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="input-container">
+        <div class="password-input"></div>
+        <div class="icon">
+          <img
+            class="img-icon"
+            src="https://img.icons8.com/material-outlined/96/ffffff/copy.png"
+          />
+        </div>
+      </div>
+      <div class="texts-container">
+        <div class="passwordLength text-container">
+          <div class="text">Password Length</div>
+          <input class="number" type="number" value="5" min="4" max="15" />
+        </div>
+        <div class="uppercaseLetters text-container">
+          <div class="text">Include uppercase letters</div>
+          <input class="uppercase checkbox" type="checkbox" />
+        </div>
+        <div class="lowercaseLetters text-container">
+          <div class="text">Include lowercase letters</div>
+          <input class="lowercase checkbox" type="checkbox" />
+        </div>
+        <div class="numbers-container text-container">
+          <div class="text">Include numbers</div>
+          <input class="numbers checkbox" type="checkbox" />
+        </div>
+        <div class="symbols-container text-container">
+          <div class="text">Include symbols</div>
+          <input class="symbols checkbox" type="checkbox" />
+        </div>
+      </div>
+      <button class="button">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
