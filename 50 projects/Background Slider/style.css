@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.first-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/elliot-paris-_d1ezIJSbas-unsplash.jpg");
+  background-position: center center;
+  background-size: 200%;
+  filter: brightness(20%);
+  z-index: 1;
+  transition: background-image 0.4s ease;
+}
+
+.arrow {
+  padding: 2rem;
+  border: 2px solid #9a7549;
+  border-left: none;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  height: 50px;
+  width: 50px;
+  fill: white;
+  display: block;
+}
+
+.arrow--1 {
+  transform: rotate(180deg);
+}
+
+.second-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50%;
+  z-index: 200;
+}
+
+.img {
+  display: block;
+  width: 80%;
+  height: 100%;
+  background-image: url("./img/elliot-paris-_d1ezIJSbas-unsplash.jpg");
+  background-position: center;
+  background-size: 313%;
+}

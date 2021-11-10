@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.container.active {
+  background-color: black;
+}
+
+.clock {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+}
+
+.button-mode {
+  border: none;
+  height: 2rem;
+  width: 7rem;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.button-mode.active {
+  background-color: white;
+  color: black;
+}
+
+.aiguille {
+  position: absolute;
+  height: 3px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0%;
+  transition: transform 0.2s;
+}
+
+.container.active .aiguille,
+.container.active .circle {
+  background-color: white;
+}
+
+.container.active .text-clock-hours,
+.container.active .text-clock-day {
+  color: white;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translate(-50%, -40%);
+}
+
+.seconds {
+  width: 9rem;
+  background-color: orangered !important;
+  transform: rotate(75deg);
+}
+
+.minutes {
+  width: 8rem;
+  transform: rotate(20deg);
+}
+
+.hours {
+  width: 5rem;
+}
+
+.text-clock {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-clock-hours {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.text-clock-day {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+}

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: rgb(56, 116, 172);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 10px;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgb(34, 69, 103);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  width: 80%;
+  height: 2.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  border: none;
+  background-color: rgb(161, 206, 226);
+}
+
+.input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(161, 206, 226);
+}
+
+.input:active,
+.input:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+.inp-container {
+  width: 80%;
+  height: 2rem;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: -0.5rem;
+  left: 0.2rem;
+}
+
+.letter-e,
+.letter-p {
+  transition: all 0.1s ease-in-out;
+  display: inline-block;
+}
+
+a:visited {
+  color: rgb(161, 206, 226);
+}
+
+.inp--password:focus + label span.letter-p,
+.inp--password:valid + label span.letter-p,
+.inp--mail:focus + label span.letter-e,
+.inp--mail:valid + label span.letter-e {
+  transform: translateY(-1rem);
+}

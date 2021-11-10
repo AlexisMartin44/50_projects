@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  transform: display 1s;
+  transition: all 0.5s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #e5f8ff 0%,
+    #e5f8ff 49.9%,
+    #4486fa 50%
+  );
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 30rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  align-items: center;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.493);
+  transition: width 0.7s;
+}
+
+.toggle-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: white;
+}
+
+.navigation-toggle {
+  position: relative;
+  margin-left: 2rem;
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: #44a8fa96;
+  transform: rotate(45deg);
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.navigation-toggle:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: #44a8fa96;
+  transform: rotate(-90deg);
+}
+
+.container.active .navigation-toggle {
+  margin: 0rem;
+  transform: rotate(-1440deg);
+}
+
+.container.active .navigation-toggle:before {
+  transform: rotate(-1440deg);
+  top: 0.5rem;
+}
+
+.container.active {
+  width: 4.5rem;
+}
+
+.container.active h3 {
+  opacity: 0;
+}
+
+.container.active .toggle-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

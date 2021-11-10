@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.descriptions {
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+  transform: translateY(0);
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  height: 100vh;
+  width: 100%;
+  transition: transform 1s;
+}
+
+.eagle {
+  background-color: #ffb361;
+}
+
+.eagle-image {
+  transform: translateY(0);
+}
+
+.castle {
+  background-color: #21292f;
+  transform: translateY(100vh);
+  opacity: 0;
+}
+
+.castle-image {
+  transform: translateY(-100vh);
+}
+
+.sky {
+  background-color: #1f76b3;
+  transform: translateY(-200vh);
+  opacity: 0;
+}
+
+.sky-image {
+  transform: translateY(-200vh);
+}
+
+.flower {
+  background-color: #ff464c;
+  transform: translateY(100vh);
+}
+
+.flower-image {
+  transform: translateY(100vh);
+}
+
+.images {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.buttons {
+  position: absolute;
+  top: 50vh;
+  left: 30vw;
+  z-index: 2;
+}
+
+.button {
+  cursor: pointer;
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.button--1 {
+  transform: rotate(90deg);
+  position: absolute;
+  left: -3rem;
+  top: 1.5rem;
+}
+.button--2 {
+  transform: rotate(270deg);
+  position: absolute;
+  top: -1.5rem;
+}

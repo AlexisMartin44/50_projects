@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+}
+
+.countdown {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0, 1, 1, 1.42);
+}
+
+.visibility {
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+}
+
+.number,
+.go {
+  position: absolute;
+  transform-origin: center;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 2rem;
+  color: blue;
+}
+
+.go {
+  top: 2rem;
+  left: 7.5rem;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.one {
+  top: 7.5rem;
+  right: 1rem;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.two {
+  bottom: 0;
+  left: 7.5rem;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.three {
+  top: 7.5rem;
+  left: 2rem;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  display: none;
+  position: absolute;
+  top: -0.5rem;
+  width: 20rem;
+  text-align: center;
+  font-size: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
